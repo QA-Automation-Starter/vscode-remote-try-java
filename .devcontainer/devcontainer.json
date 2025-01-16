@@ -7,7 +7,7 @@
 
 	"features": {
 		"ghcr.io/devcontainers/features/java:1": {
-			"version": "none",
+			"version": "11",
 			"installMaven": "true",
 			"mavenVersion": "3.8.6",
 			"installGradle": "false"
@@ -18,7 +18,15 @@
 	"customizations": {
 		// Configure properties specific to VS Code.
 		"vscode": {
-			"settings": {},
+			"settings": {
+				"java.configuration.runtimes": [
+				{
+					"name": "JavaSE-11",
+					"path": "/usr/lib/jvm/msopenjdk-current",
+					"default": true
+				}
+				]
+			},
 			"extensions": [
 				"streetsidesoftware.code-spell-checker"
 			]
